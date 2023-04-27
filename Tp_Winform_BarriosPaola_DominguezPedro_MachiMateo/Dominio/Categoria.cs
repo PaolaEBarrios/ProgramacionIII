@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TpWinform_Catalogo
+namespace dominio
 {
-    internal class Categoria
+    public  class Categoria
     {
         public int idCategoria { get; set; }
         public string categoria { get; set; }

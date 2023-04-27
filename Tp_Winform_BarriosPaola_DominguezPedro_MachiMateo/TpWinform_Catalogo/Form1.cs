@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using dominio;
+using negocio;
+
+
 namespace TpWinform_Catalogo
 {
     public partial class FrmPrincipal : Form
