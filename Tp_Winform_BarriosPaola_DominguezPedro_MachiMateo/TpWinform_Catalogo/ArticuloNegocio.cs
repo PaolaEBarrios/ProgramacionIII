@@ -36,7 +36,7 @@ namespace TpWinform_Catalogo
                 while(lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.imagen =
+                    aux.urlImagen =
                     aux.codigoArticulo =
                     aux.descripcion =
                     aux.precio =
@@ -44,8 +44,10 @@ namespace TpWinform_Catalogo
                     aux.Marca.marca =
                     aux.Categoria.categoria =
 
-                    lista.Add(aux);
+                    lista.Add(aux); 
                 }
+
+                conexion.Close();
 
                 return lista;
             }
@@ -53,6 +55,10 @@ namespace TpWinform_Catalogo
             {
 
                 throw ex;
+            }
+            finally
+            {
+                conexion.Close();
             }
             
             

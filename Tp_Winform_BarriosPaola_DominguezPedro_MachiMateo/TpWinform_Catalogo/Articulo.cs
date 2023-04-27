@@ -13,7 +13,7 @@ namespace TpWinform_Catalogo
         public string descripcion { get; set; }
         public Marca Marca { get; set; }
         public  Categoria Categoria { get; set; }
-        public string imagen { get; set; }
+        public string urlImagen { get; set; }
         public decimal precio { get; set; }
 
     
