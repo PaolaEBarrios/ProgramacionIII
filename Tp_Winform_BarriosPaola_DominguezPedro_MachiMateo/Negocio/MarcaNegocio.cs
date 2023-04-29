@@ -8,10 +8,10 @@ namespace Negocio
 {
     public class MarcaNegocio
     {
-        public List<MarcaNegocio> listar
-        {
+        //public List<MarcaNegocio> listar
+        //{
 
-        }
+        //}
 
     }
 }

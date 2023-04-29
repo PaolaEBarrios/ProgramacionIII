@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace Negocio
 {
     public class CategoriaNegocio
-
-
     {
+
+
+
     }
 }

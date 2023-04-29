@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using dominio;
-using negocio;
+using Negocio;
 
 
 namespace TpWinform_Catalogo
