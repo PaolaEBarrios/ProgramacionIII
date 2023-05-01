@@ -10,6 +10,7 @@ using dominio;
 
 namespace Negocio
 {
+    //Comentario
     public class ArticuloNegocio
     {
         public List<Articulo> listar()
