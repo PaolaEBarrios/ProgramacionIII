@@ -33,7 +33,7 @@ namespace TpWinform_Catalogo
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
             Articulo seleccionado=(Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            pbArticulo.Load(seleccionado.urlImagen);
+            cargarImagen(seleccionado.urlImagen);
         }
 
         private void cargarImagen(string imagen)
@@ -45,7 +45,7 @@ namespace TpWinform_Catalogo
             catch (Exception ex)
             {
 
-                pbArticulo.Load("https://www.bicifan.uy/wp-content/uploads/2016/09/producto-sin-imagen.png");
+                pbArticulo.Load("https://www.webempresa.com/foro/wp-content/uploads/wpforo/attachments/3200/318277=80538-Sin_imagen_disponible.jpg");
             }
         }
 

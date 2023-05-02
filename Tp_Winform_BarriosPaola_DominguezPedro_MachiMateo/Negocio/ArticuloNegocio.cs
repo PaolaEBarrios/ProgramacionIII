@@ -32,11 +32,11 @@ namespace Negocio
                     aux.nombre = (string)datos.Lector["Nombre"];
                     aux.descripcion = (string)datos.Lector["Descripcion"];
 
-                    //aux.Categoria=new Categoria();
-                    aux.Categoria = (string)datos.Lector["Categoria"];
+                    aux.Categoria=new Categoria();
+                    aux.Categoria.categoria = (string)datos.Lector["Categoria"];
 
-                    //aux.Marca = new Marca();
-                    aux.Marca = (string)datos.Lector["Marca"];
+                    aux.Marca = new Marca();
+                    aux.Marca.marca = (string)datos.Lector["Marca"];
 
                     aux.urlImagen = (string)datos.Lector["UrlImagen"];
                     aux.precio = (decimal)datos.Lector["Precio"];

@@ -50,7 +50,7 @@
             // 
             this.pbArticulo.Location = new System.Drawing.Point(698, 80);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(215, 257);
+            this.pbArticulo.Size = new System.Drawing.Size(255, 273);
             this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticulo.TabIndex = 1;
             this.pbArticulo.TabStop = false;
@@ -69,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 450);
+            this.ClientSize = new System.Drawing.Size(999, 450);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.dgvArticulo);
