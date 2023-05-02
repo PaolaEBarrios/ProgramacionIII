@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace Negocio
 {
@@ -19,9 +20,11 @@ namespace Negocio
         }
 
         public AccesoDatos()
+
         {
-            conexion=new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security = true");
-            comando=new SqlCommand();
+            conexion=new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security = True");
+            //conexion = new SqlConnection("server=.\\SQLEXPRESS; Integrated Security = False; database = CATALOGO_P3_DB; uid = myUser; password = myPass");
+            comando =new SqlCommand();
 
 
         }

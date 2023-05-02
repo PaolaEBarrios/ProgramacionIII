@@ -7,3 +7,12 @@ E:\UTN\Programacioniii2023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedr
 E:\UTN\Programacioniii2023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 E:\UTN\Programacioniii2023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.dll
 E:\UTN\Programacioniii2023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Negocio.dll
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Dominio.dll
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.dll
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.pdb
