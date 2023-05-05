@@ -31,6 +31,8 @@
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
@@ -38,19 +40,22 @@
             // dgvArticulo
             // 
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulo.Location = new System.Drawing.Point(23, 47);
+            this.dgvArticulo.Location = new System.Drawing.Point(15, 31);
+            this.dgvArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.RowHeadersWidth = 62;
             this.dgvArticulo.RowTemplate.Height = 28;
-            this.dgvArticulo.Size = new System.Drawing.Size(645, 336);
+            this.dgvArticulo.Size = new System.Drawing.Size(430, 218);
             this.dgvArticulo.TabIndex = 0;
+            this.dgvArticulo.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvArticulo_DataError);
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(698, 80);
+            this.pbArticulo.Location = new System.Drawing.Point(465, 52);
+            this.pbArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(255, 273);
+            this.pbArticulo.Size = new System.Drawing.Size(170, 177);
             this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticulo.TabIndex = 1;
             this.pbArticulo.TabStop = false;
@@ -59,20 +64,44 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(228, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(152, 6);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(171, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(122, 17);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Catalogo Articulos";
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(101, 257);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(15, 256);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 450);
+            this.ClientSize = new System.Drawing.Size(666, 292);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.dgvArticulo);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrincipal";
             this.Text = "TP Winform";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
@@ -88,6 +117,8 @@
         private System.Windows.Forms.DataGridView dgvArticulo;
         private System.Windows.Forms.PictureBox pbArticulo;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
 

@@ -49,5 +49,25 @@ namespace TpWinform_Catalogo
             }
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+
+            Agregar modificar = new Agregar(seleccionado);
+            modificar.ShowDialog();
+            
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Agregar alta = new Agregar();
+            alta.ShowDialog();
+        }
+
+        private void dgvArticulo_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }

@@ -46,3 +46,4 @@ E:\UTN\nueva copiada\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_Mach
 E:\UTN\nueva copiada\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.csproj.CopyComplete
 E:\UTN\nueva copiada\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.exe
 E:\UTN\nueva copiada\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.pdb
+C:\Users\Peterzz\Documents\GitHub\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.Agregar.resources
