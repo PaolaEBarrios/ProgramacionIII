@@ -108,7 +108,7 @@ namespace TpWinform_Catalogo
             if(filtro != "")
             {
 
-                listaFiltrada = listaArticulo.FindAll(x => x.codigoArticulo == filtro);
+                listaFiltrada = listaArticulo.FindAll(x => x.nombre.ToUpper().Contains (filtro.ToUpper()));//para que busque por coincidencia
             }
             else
             {
