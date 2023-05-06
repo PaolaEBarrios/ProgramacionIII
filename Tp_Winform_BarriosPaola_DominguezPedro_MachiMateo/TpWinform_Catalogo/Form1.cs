@@ -141,9 +141,13 @@ namespace TpWinform_Catalogo
             Articulo seleccionado;
             try
             {
-                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-                articulo.EliminarArticulo(seleccionado.Id);
-                cargar();
+                DialogResult respuesta = MessageBox.Show("Quieres Realmente Eliminar Este Articulo?", "Eliminando..", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                    articulo.EliminarArticulo(seleccionado.Id);
+                    cargar();
+                }
             }
             catch (Exception ex)
             {
