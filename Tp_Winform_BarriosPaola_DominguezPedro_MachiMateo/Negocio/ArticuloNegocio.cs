@@ -79,7 +79,7 @@ namespace Negocio
 
             try
             {
-                datos.setearQuery("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)values('"+ articulo.codigoArticulo + "','"+ articulo.nombre + "','"+ articulo.descripcion + "',"+ articulo.Marca + ","+ articulo.Categoria + ","+ articulo.precio +")");
+                datos.setearQuery("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)values('"+ articulo.codigoArticulo + "','"+ articulo.nombre + "','"+ articulo.descripcion + "',"+ articulo.Marca.idMarca + ","+ articulo.Categoria.idCategoria + ","+ articulo.precio +")");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -97,12 +97,12 @@ namespace Negocio
             try
             {
                 //Datos.setearQuery("update ARTICULOS set Codigo = '"+ modificar.codigoArticulo +"', Nombre = '"+ modificar.nombre +"', Descripcion = '"+ modificar.descripcion +"', IdMarca = "+ modificar.Marca +", IdCategoria = "+ modificar.Categoria +", Precio = "+ modificar.precio +" Where Id = "+ modificar.Id +"");
-                Datos.setearQuery("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = "+modificar.Marca+ ", IdCategoria = "+modificar.Categoria+",  Precio = @precio  Where Id = @id");
+                Datos.setearQuery("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria,  Precio = @precio  Where Id = @id");
                 Datos.setParameters("@codigo", modificar.codigoArticulo);
                 Datos.setParameters("@nombre", modificar.nombre);
                 Datos.setParameters("@descripcion", modificar.descripcion);
-                //Datos.setParameters("@IdMarca", modificar.Marca);
-                //Datos.setParameters("@IdCategoria", modificar.Categoria);
+                Datos.setParameters("@IdMarca", modificar.Marca);
+                Datos.setParameters("@IdCategoria", modificar.Categoria);
                 Datos.setParameters("@precio", modificar.precio);
                 Datos.setParameters("@id", modificar.Id);
                 Datos.ejecutarAccion();

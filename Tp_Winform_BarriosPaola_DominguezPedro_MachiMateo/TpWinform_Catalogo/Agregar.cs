@@ -37,6 +37,8 @@ namespace TpWinform_Catalogo
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+                string marca;
+                string categoria;
                 if (articulo == null)
                 {
                     articulo = new Articulo();
@@ -45,14 +47,54 @@ namespace TpWinform_Catalogo
                 articulo.codigoArticulo = tbCodigo.Text;
                 articulo.nombre = tbNombre.Text;
                 articulo.descripcion = tbDescripcion.Text;
+
+
                 articulo.Categoria = new Categoria();
-                articulo.Categoria.categoria = tbCategoria.Text;
+                if (cboCategoria.Text == "Celulares")
+                {
+                    articulo.Categoria.idCategoria = 1;
+                }
+                if (cboCategoria.Text == "Televisores")
+                {
+                    articulo.Categoria.idCategoria = 2;
+                }
+                if (cboCategoria.Text == "Media")
+                {
+                    articulo.Categoria.idCategoria = 3;
+                }
+                if (cboCategoria.Text == "Audio")
+                {
+                    articulo.Categoria.idCategoria = 4;
+                }
+
                 articulo.Marca = new Marca();
-                articulo.Marca.marca = tbMarca.Text;
+                if (cboMarca.Text == "Samsung")
+                {
+                    articulo.Marca.idMarca = 1;
+                }
+                if (cboMarca.Text == "Apple")
+                {
+                    articulo.Marca.idMarca = 2;
+                }
+                if (cboMarca.Text == "Sony")
+                {
+                    articulo.Marca.idMarca = 3;
+                }
+                if (cboMarca.Text == "Huawei")
+                {
+                    articulo.Marca.idMarca = 4;
+                }
+                if (cboMarca.Text == "Motorola")
+                {
+                    articulo.Marca.idMarca = 5;
+                }
+                //articulo.Marca.marca = cboMarca.Text;
+
+
                 articulo.urlImagen = tbURL.Text;
                 articulo.precio = decimal.Parse(nudPrecio.Text);
 
-                if(articulo.Id != 0)
+                if (articulo.Id != 0)
                 {
                     negocio.ModificarArticulo(articulo);
                     MessageBox.Show("Modificado!");
@@ -65,24 +107,71 @@ namespace TpWinform_Catalogo
 
                 Close();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
         }
 
         private void Agregar_Load(object sender, EventArgs e)
         {
-            if(articulo != null)
+            ArticuloNegocio art = new ArticuloNegocio();
+            AccesoDatos datos = new AccesoDatos();
+            Articulo aux = new Articulo();
+            aux.Categoria = new Categoria();
+            List<Articulo> lista = new List<Articulo>();
+
+            datos.setearQuery("Select Descripcion as Categoria from CATEGORIAS");
+            datos.ejecutarLectura();
+            while (datos.Lector.Read())
+            {
+                try
+                {
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                        aux.Categoria.categoria = (string)datos.Lector["Categoria"];
+
+                    cboCategoria.Items.Add(aux.Categoria.categoria);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
+             ArticuloNegocio art1 = new ArticuloNegocio();
+             AccesoDatos datos1 = new AccesoDatos();
+             Articulo aux1 = new Articulo();
+             aux1.Marca = new Marca();
+             List<Articulo> lista1 = new List<Articulo>();
+             
+             datos1.setearQuery("Select Descripcion as Marca from MARCAS");
+             datos1.ejecutarLectura();
+             while (datos1.Lector.Read())
+             {
+                 try
+                 {
+                     if (!(datos1.Lector["Marca"] is DBNull))
+                         aux1.Marca.marca = (string)datos1.Lector["Marca"];
+             
+                     cboMarca.Items.Add(aux1.Marca.marca);
+                 }
+                 catch (Exception ex)
+                 {
+                     throw ex;
+                 }
+             }
+             
+    if (articulo != null)
             {
                 tbId.Text = articulo.Id.ToString();
                 tbCodigo.Text = articulo.codigoArticulo;
                 tbNombre.Text = articulo.nombre;
                 tbDescripcion.Text = articulo.descripcion;
                 articulo.Categoria = new Categoria();
-                tbCategoria.Text = articulo.Categoria.categoria;
+                cboCategoria.Text = articulo.Categoria.categoria;
                 articulo.Marca = new Marca();
-                tbMarca.Text = articulo.Marca.marca;
+                cboMarca.Text = articulo.Marca.marca;
                 tbURL.Text = articulo.urlImagen;
                 nudPrecio.Text = articulo.precio.ToString();
             }
