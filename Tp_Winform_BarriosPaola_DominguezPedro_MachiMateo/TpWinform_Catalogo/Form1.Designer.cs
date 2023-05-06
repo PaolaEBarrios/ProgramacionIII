@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -45,21 +46,21 @@
             // 
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulo.Location = new System.Drawing.Point(15, 41);
+            this.dgvArticulo.Location = new System.Drawing.Point(15, 50);
             this.dgvArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.dgvArticulo.MultiSelect = false;
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.RowHeadersWidth = 62;
             this.dgvArticulo.RowTemplate.Height = 28;
             this.dgvArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulo.Size = new System.Drawing.Size(499, 226);
+            this.dgvArticulo.Size = new System.Drawing.Size(686, 226);
             this.dgvArticulo.TabIndex = 0;
             this.dgvArticulo.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvArticulo_DataError);
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(527, 46);
+            this.pbArticulo.Location = new System.Drawing.Point(758, 50);
             this.pbArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.pbArticulo.Name = "pbArticulo";
             this.pbArticulo.Size = new System.Drawing.Size(178, 194);
@@ -71,7 +72,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(237, -1);
+            this.lblTitulo.Location = new System.Drawing.Point(272, 31);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(122, 17);
@@ -80,7 +81,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(106, 272);
+            this.btnModificar.Location = new System.Drawing.Point(106, 281);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 3;
@@ -90,7 +91,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(15, 272);
+            this.btnAgregar.Location = new System.Drawing.Point(15, 281);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 4;
@@ -101,7 +102,7 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(12, 26);
+            this.lblFiltro.Location = new System.Drawing.Point(12, 9);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(29, 13);
             this.lblFiltro.TabIndex = 5;
@@ -110,7 +111,7 @@
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(47, 20);
+            this.txtFiltro.Location = new System.Drawing.Point(47, 9);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(177, 20);
             this.txtFiltro.TabIndex = 6;
@@ -118,7 +119,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(230, 19);
+            this.btnBuscar.Location = new System.Drawing.Point(230, 9);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(71, 21);
             this.btnBuscar.TabIndex = 7;
@@ -128,7 +129,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(196, 272);
+            this.btnEliminar.Location = new System.Drawing.Point(196, 281);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 8;
@@ -140,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 304);
+            this.ClientSize = new System.Drawing.Size(984, 316);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltro);
@@ -150,8 +151,12 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.dgvArticulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(1000, 355);
+            this.MinimumSize = new System.Drawing.Size(1000, 355);
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TP Winform";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
