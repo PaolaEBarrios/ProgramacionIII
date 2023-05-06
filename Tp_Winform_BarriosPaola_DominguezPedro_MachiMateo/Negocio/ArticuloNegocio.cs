@@ -27,23 +27,27 @@ namespace Negocio
                 {
                     Articulo aux = new Articulo();
 
-                    
-                        aux.Id = (int)datos.Lector["Id"];
+
+                    aux.Id = (int)datos.Lector["Id"];
                     if (!(datos.Lector["Codigo"] is DBNull))
                         aux.codigoArticulo = (string)datos.Lector["Codigo"];
                     if (!(datos.Lector["Nombre"] is DBNull))
                         aux.nombre = (string)datos.Lector["Nombre"];
                     if (!(datos.Lector["Descripcion"] is DBNull))
                         aux.descripcion = (string)datos.Lector["Descripcion"];
-                    
-                    
-                    aux.Categoria=new Categoria();
+
+
+                    aux.Categoria = new Categoria();
                     if (!(datos.Lector["Categoria"] is DBNull))
                         aux.Categoria.categoria = (string)datos.Lector["Categoria"];
+                    else
+                        aux.Categoria.categoria = "Sin categoria";
 
                     aux.Marca = new Marca();
                     if (!(datos.Lector["Marca"] is DBNull))
                         aux.Marca.marca = (string)datos.Lector["Marca"];
+                    else
+                        aux.Marca.marca = "Sin marca";
 
                     if (!(datos.Lector["UrlImagen"] is DBNull))
                         aux.urlImagen = (string)datos.Lector["UrlImagen"];

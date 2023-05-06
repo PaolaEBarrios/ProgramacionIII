@@ -25,18 +25,7 @@ namespace TpWinform_Catalogo
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-                ArticuloNegocio negocio = new ArticuloNegocio();
-                listaArticulo = negocio.listar();
-                dgvArticulo.DataSource = listaArticulo;
-                pbArticulo.Load(listaArticulo[0].urlImagen);
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
+            cargar();
             
         }
 
@@ -44,6 +33,30 @@ namespace TpWinform_Catalogo
         {
             Articulo seleccionado=(Articulo)dgvArticulo.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.urlImagen);
+        }
+
+        private void cargar()
+        {
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                listaArticulo = negocio.listar();
+                dgvArticulo.DataSource = listaArticulo;
+                ocultarColumnas();
+                pbArticulo.Load(listaArticulo[0].urlImagen);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvArticulo.Columns["Id"].Visible = false;
+            dgvArticulo.Columns["UrlImagen"].Visible = false;
+
         }
 
         private void cargarImagen(string imagen)
@@ -73,6 +86,7 @@ namespace TpWinform_Catalogo
         {
             Agregar alta = new Agregar();
             alta.ShowDialog();
+            cargar();
         }
 
         private void dgvArticulo_DataError(object sender, DataGridViewDataErrorEventArgs e)
