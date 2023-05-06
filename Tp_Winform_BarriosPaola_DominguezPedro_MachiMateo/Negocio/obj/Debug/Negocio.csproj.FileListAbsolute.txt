@@ -34,3 +34,12 @@ E:\UTN\PROYECTO DIA 5DEL52023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezP
 E:\UTN\PROYECTO DIA 5DEL52023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 E:\UTN\PROYECTO DIA 5DEL52023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.dll
 E:\UTN\PROYECTO DIA 5DEL52023\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.pdb
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Negocio.dll
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Negocio.pdb
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Dominio.dll
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\bin\Debug\Dominio.pdb
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.dll
+C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\Negocio\obj\Debug\Negocio.pdb

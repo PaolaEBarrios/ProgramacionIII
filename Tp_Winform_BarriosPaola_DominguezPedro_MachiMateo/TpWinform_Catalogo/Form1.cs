@@ -16,7 +16,7 @@ namespace TpWinform_Catalogo
 {
     public partial class FrmPrincipal : Form
     {
-        private List<Articulo> listaArticulo; 
+        private List<Articulo> listaArticulo;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -26,12 +26,12 @@ namespace TpWinform_Catalogo
         {
 
             cargar();
-            
+
         }
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado=(Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.urlImagen);
         }
 
@@ -79,7 +79,7 @@ namespace TpWinform_Catalogo
 
             Agregar modificar = new Agregar(seleccionado);
             modificar.ShowDialog();
-            
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -90,6 +90,26 @@ namespace TpWinform_Catalogo
         }
 
         private void dgvArticulo_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+
+        private void lblFiltro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+
+            listaFiltrada = listaArticulo.FindAll(x => x.codigoArticulo == txtFiltro.Text);            
+
+
+
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
 
         }
