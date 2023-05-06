@@ -20,26 +20,35 @@ namespace Negocio
 
             try
             {
-                datos.setearQuery("Select a.Id as Id, a.Codigo as Codigo,a.Nombre as Nombre,a.Descripcion as Descripcion,c.Descripcion AS Categoria,m.Descripcion AS Marca,i.ImagenUrl AS UrlImagen, a.Precio as Precio from ARTICULOS as a inner join IMAGENEs as i on i.IdArticulo = a.Id inner join marcas as m on m.Id = a.IdMarca inner join CATEGORIAS as c on c.Id = a.IdCategoria");
+                datos.setearQuery("Select a.Id as Id, a.Codigo as Codigo,a.Nombre as Nombre,a.Descripcion as Descripcion,c.Descripcion AS Categoria,m.Descripcion AS Marca,i.ImagenUrl AS UrlImagen, a.Precio as Precio from ARTICULOS as a inner join IMAGENEs as i on i.IdArticulo = a.Id left join marcas as m on m.Id = a.IdMarca left join CATEGORIAS as c on c.Id = a.IdCategoria");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
 
-                    aux.Id = (int)datos.Lector["Id"];
-                    aux.codigoArticulo = (string)datos.Lector["Codigo"];
-                    aux.nombre = (string)datos.Lector["Nombre"];
-                    aux.descripcion = (string)datos.Lector["Descripcion"];
-
+                    
+                        aux.Id = (int)datos.Lector["Id"];
+                    if (!(datos.Lector["Codigo"] is DBNull))
+                        aux.codigoArticulo = (string)datos.Lector["Codigo"];
+                    if (!(datos.Lector["Nombre"] is DBNull))
+                        aux.nombre = (string)datos.Lector["Nombre"];
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        aux.descripcion = (string)datos.Lector["Descripcion"];
+                    
+                    
                     aux.Categoria=new Categoria();
-                    aux.Categoria.categoria = (string)datos.Lector["Categoria"];
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                        aux.Categoria.categoria = (string)datos.Lector["Categoria"];
 
                     aux.Marca = new Marca();
-                    aux.Marca.marca = (string)datos.Lector["Marca"];
+                    if (!(datos.Lector["Marca"] is DBNull))
+                        aux.Marca.marca = (string)datos.Lector["Marca"];
 
-                    aux.urlImagen = (string)datos.Lector["UrlImagen"];
-                    aux.precio = (decimal)datos.Lector["Precio"];
+                    if (!(datos.Lector["UrlImagen"] is DBNull))
+                        aux.urlImagen = (string)datos.Lector["UrlImagen"];
+                    if (!(datos.Lector["Precio"] is DBNull))
+                        aux.precio = (decimal)datos.Lector["Precio"];
                     
                     lista.Add(aux);
                 }

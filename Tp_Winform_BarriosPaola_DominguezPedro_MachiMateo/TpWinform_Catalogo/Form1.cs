@@ -24,10 +24,20 @@ namespace TpWinform_Catalogo
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArticulo = negocio.listar();
-            dgvArticulo.DataSource = listaArticulo;
-            pbArticulo.Load(listaArticulo[0].urlImagen);
+
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                listaArticulo = negocio.listar();
+                dgvArticulo.DataSource = listaArticulo;
+                pbArticulo.Load(listaArticulo[0].urlImagen);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
