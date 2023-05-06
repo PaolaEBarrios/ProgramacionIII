@@ -103,7 +103,11 @@ namespace TpWinform_Catalogo
         {
             List<Articulo> listaFiltrada;
 
-            listaFiltrada = listaArticulo.FindAll(x => x.codigoArticulo == txtFiltro.Text);            
+            listaFiltrada = listaArticulo.FindAll(x => x.codigoArticulo == txtFiltro.Text);
+
+            dgvArticulo.DataSource = null; //limpia data
+            dgvArticulo.DataSource = listaFiltrada;
+
 
 
 
