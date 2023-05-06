@@ -79,6 +79,7 @@ namespace TpWinform_Catalogo
 
             Agregar modificar = new Agregar(seleccionado);
             modificar.ShowDialog();
+            cargar();
 
         }
 
@@ -132,6 +133,22 @@ namespace TpWinform_Catalogo
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio articulo = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                articulo.EliminarArticulo(seleccionado.Id);
+                cargar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
