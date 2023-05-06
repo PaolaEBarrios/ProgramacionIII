@@ -101,8 +101,8 @@ namespace Negocio
                 Datos.setParameters("@codigo", modificar.codigoArticulo);
                 Datos.setParameters("@nombre", modificar.nombre);
                 Datos.setParameters("@descripcion", modificar.descripcion);
-                Datos.setParameters("@IdMarca", modificar.Marca);
-                Datos.setParameters("@IdCategoria", modificar.Categoria);
+                Datos.setParameters("@IdMarca", modificar.Marca.idMarca);
+                Datos.setParameters("@IdCategoria", modificar.Categoria.idCategoria);
                 Datos.setParameters("@precio", modificar.precio);
                 Datos.setParameters("@id", modificar.Id);
                 Datos.ejecutarAccion();
