@@ -37,6 +37,7 @@ namespace TpWinform_Catalogo
 
         private void cargar()
         {
+            
             try
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
@@ -102,10 +103,6 @@ namespace TpWinform_Catalogo
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-            
-                btnAgregar.Visible = false;
-                btnEliminar.Visible = false;
             
 
             List<Articulo> listaFiltrada;
@@ -127,8 +124,15 @@ namespace TpWinform_Catalogo
             dgvArticulo.DataSource = null; //limpia data
             dgvArticulo.DataSource = listaFiltrada;
 
-            ocultarColumnas();
-
+            if(dgvArticulo.Rows.Count == 0)
+            {
+                btnAgregar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+            }
+            
+                ocultarColumnas();
+            
         }
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
@@ -159,6 +163,11 @@ namespace TpWinform_Catalogo
         private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            cargar();
         }
     }
 }
