@@ -81,3 +81,20 @@ C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_Barri
 C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.csproj.CopyComplete
 C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.exe
 C:\Users\MATEO\Desktop\Repositorio-GitHub-Prog3\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.pdb
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\bin\Debug\TpWinform_Catalogo.exe.config
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\bin\Debug\TpWinform_Catalogo.exe
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\bin\Debug\TpWinform_Catalogo.pdb
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\bin\Debug\Dominio.dll
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\bin\Debug\Negocio.dll
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\bin\Debug\Dominio.pdb
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\bin\Debug\Negocio.pdb
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.csproj.AssemblyReference.cache
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.csproj.SuggestedBindingRedirects.cache
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.Agregar.resources
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.FrmPrincipal.resources
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.Properties.Resources.resources
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.csproj.GenerateResource.cache
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.csproj.CoreCompileInputs.cache
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.csproj.CopyComplete
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.exe
+E:\UTN\7-5-2023 winform tp\ProgramacionIII\Tp_Winform_BarriosPaola_DominguezPedro_MachiMateo\TpWinform_Catalogo\obj\Debug\TpWinform_Catalogo.pdb

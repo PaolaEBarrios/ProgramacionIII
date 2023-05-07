@@ -43,7 +43,7 @@ namespace TpWinform_Catalogo
                 {
                     articulo = new Articulo();
                 }
-                articulo.Id = int.Parse(tbId.Text);
+                //articulo.Id = int.Parse(tbId.Text);
                 articulo.codigoArticulo = tbCodigo.Text;
                 articulo.nombre = tbNombre.Text;
                 articulo.descripcion = tbDescripcion.Text;
@@ -91,7 +91,12 @@ namespace TpWinform_Catalogo
                 //articulo.Marca.marca = cboMarca.Text;
 
 
-                articulo.urlImagen = tbURL.Text;
+                articulo.imagen = new Imagen();
+                
+
+
+                articulo.imagen.idArticulo = negocio.TraerUltimoId();
+                articulo.imagen.url = tbURL.Text;
                 articulo.precio = decimal.Parse(nudPrecio.Text);
 
                 if (articulo.Id != 0)
@@ -101,6 +106,7 @@ namespace TpWinform_Catalogo
                 }
                 else
                 {
+                    articulo.Id=negocio.TraerUltimoId();
                     negocio.AgregarArticulo(articulo);
                     MessageBox.Show("Agregado!");
                 }
@@ -164,6 +170,8 @@ namespace TpWinform_Catalogo
              
     if (articulo != null)
             {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+
                 tbId.Text = articulo.Id.ToString();
                 tbCodigo.Text = articulo.codigoArticulo;
                 tbNombre.Text = articulo.nombre;
@@ -172,8 +180,31 @@ namespace TpWinform_Catalogo
                 cboCategoria.Text = articulo.Categoria.categoria;
                 articulo.Marca = new Marca();
                 cboMarca.Text = articulo.Marca.marca;
-                tbURL.Text = articulo.urlImagen;
+
+                articulo.imagen = new Imagen();
+                articulo.imagen.idArticulo = negocio.TraerUltimoId();
+                
+                tbURL.Text = articulo.imagen.url;
                 nudPrecio.Text = articulo.precio.ToString();
+            }
+        }
+
+        private void tbURL_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(tbURL.Text);
+        }
+
+
+        private void cargarImagen(string imag)
+        {
+            try
+            {
+                pbxAddPokemon.Load(imag);
+            }
+            catch (Exception ex)
+            {
+
+                pbxAddPokemon.Load("https://www.webempresa.com/foro/wp-content/uploads/wpforo/attachments/3200/318277=80538-Sin_imagen_disponible.jpg");
             }
         }
     }

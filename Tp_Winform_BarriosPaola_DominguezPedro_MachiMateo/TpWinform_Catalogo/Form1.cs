@@ -32,7 +32,7 @@ namespace TpWinform_Catalogo
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.urlImagen);
+            cargarImagen(seleccionado.imagen.url);
         }
 
         private void cargar()
@@ -43,7 +43,7 @@ namespace TpWinform_Catalogo
                 listaArticulo = negocio.listar();
                 dgvArticulo.DataSource = listaArticulo;
                 ocultarColumnas();
-                pbArticulo.Load(listaArticulo[0].urlImagen);
+                pbArticulo.Load(listaArticulo[0].imagen.url);
             }
             catch (Exception ex)
             {
@@ -55,7 +55,7 @@ namespace TpWinform_Catalogo
         private void ocultarColumnas()
         {
             dgvArticulo.Columns["Id"].Visible = false;
-            dgvArticulo.Columns["UrlImagen"].Visible = false;
+            dgvArticulo.Columns["Imagen"].Visible = false;
 
         }
 

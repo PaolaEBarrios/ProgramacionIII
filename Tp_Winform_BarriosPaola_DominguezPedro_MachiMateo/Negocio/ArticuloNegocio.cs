@@ -49,8 +49,10 @@ namespace Negocio
                     else
                         aux.Marca.marca = "Sin marca";
 
+
+                    aux.imagen = new Imagen();
                     if (!(datos.Lector["UrlImagen"] is DBNull))
-                        aux.urlImagen = (string)datos.Lector["UrlImagen"];
+                        aux.imagen.url = (string)datos.Lector["UrlImagen"];
                     if (!(datos.Lector["Precio"] is DBNull))
                         aux.precio = (decimal)datos.Lector["Precio"];
                     
@@ -79,7 +81,7 @@ namespace Negocio
 
             try
             {
-                datos.setearQuery("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)values('"+ articulo.codigoArticulo + "','"+ articulo.nombre + "','"+ articulo.descripcion + "',"+ articulo.Marca.idMarca + ","+ articulo.Categoria.idCategoria + ","+ articulo.precio +")");
+                datos.setearQuery("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)values('" + articulo.codigoArticulo + "','" + articulo.nombre + "','" + articulo.descripcion + "'," + articulo.Marca.idMarca + "," + articulo.Categoria.idCategoria + "," + articulo.precio + ") Insert into Imagenes (idArticulo,imagenurl) values (" + articulo.Id + ",'" + articulo.imagen.url + "')"); 
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -129,6 +131,34 @@ namespace Negocio
             catch(Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public int TraerUltimoId()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                int cont = 0;
+                datos.setearQuery("select id from ARTICULOS");
+                datos.ejecutarLectura();
+
+                while(datos.Lector.Read())
+                {
+                    cont++;
+                }
+
+                return cont+1;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
 
