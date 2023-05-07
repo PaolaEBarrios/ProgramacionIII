@@ -105,7 +105,15 @@ namespace TpWinform_Catalogo
         {
             
 
-            List<Articulo> listaFiltrada;
+           
+            
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+
+
+             List<Articulo> listaFiltrada;
 
             string filtro = txtFiltro.Text; 
 
@@ -132,11 +140,15 @@ namespace TpWinform_Catalogo
             }
             
                 ocultarColumnas();
-            
-        }
 
-        private void txtFiltro_TextChanged(object sender, EventArgs e)
-        {
+
+
+
+
+
+
+
+
 
         }
 
@@ -168,6 +180,11 @@ namespace TpWinform_Catalogo
         private void btnRecargar_Click(object sender, EventArgs e)
         {
             cargar();
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
