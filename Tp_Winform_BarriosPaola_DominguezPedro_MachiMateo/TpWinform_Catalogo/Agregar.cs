@@ -37,81 +37,93 @@ namespace TpWinform_Catalogo
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+
+
                 string marca;
                 string categoria;
-                if (articulo == null)
-                {
-                    articulo = new Articulo();
-                }
-                //articulo.Id = int.Parse(tbId.Text);
-                articulo.codigoArticulo = tbCodigo.Text;
-                articulo.nombre = tbNombre.Text;
-                articulo.descripcion = tbDescripcion.Text;
+                if (tbCodigo.Text != "" && tbNombre.Text != "" && nudPrecio.Text != "") 
+                { 
+                    if (articulo == null)
+                    {
+                        articulo = new Articulo();
+                    }
+                    //articulo.Id = int.Parse(tbId.Text);
+                    articulo.codigoArticulo = tbCodigo.Text;
+                    articulo.nombre = tbNombre.Text;
+                    articulo.descripcion = tbDescripcion.Text;
 
 
-                articulo.Categoria = new Categoria();
-                if (cboCategoria.Text == "Celulares")
-                {
-                    articulo.Categoria.idCategoria = 1;
-                }
-                if (cboCategoria.Text == "Televisores")
-                {
-                    articulo.Categoria.idCategoria = 2;
-                }
-                if (cboCategoria.Text == "Media")
-                {
-                    articulo.Categoria.idCategoria = 3;
-                }
-                if (cboCategoria.Text == "Audio")
-                {
-                    articulo.Categoria.idCategoria = 4;
-                }
+                    articulo.Categoria = new Categoria();
+                    if (cboCategoria.Text == "Celulares")
+                    {
+                        articulo.Categoria.idCategoria = 1;
+                    }
+                    if (cboCategoria.Text == "Televisores")
+                    {
+                        articulo.Categoria.idCategoria = 2;
+                    }
+                    if (cboCategoria.Text == "Media")
+                    {
+                        articulo.Categoria.idCategoria = 3;
+                    }
+                    if (cboCategoria.Text == "Audio")
+                    {
+                        articulo.Categoria.idCategoria = 4;
+                    }
 
-                articulo.Marca = new Marca();
-                if (cboMarca.Text == "Samsung")
-                {
-                    articulo.Marca.idMarca = 1;
-                }
-                if (cboMarca.Text == "Apple")
-                {
-                    articulo.Marca.idMarca = 2;
-                }
-                if (cboMarca.Text == "Sony")
-                {
-                    articulo.Marca.idMarca = 3;
-                }
-                if (cboMarca.Text == "Huawei")
-                {
-                    articulo.Marca.idMarca = 4;
-                }
-                if (cboMarca.Text == "Motorola")
-                {
-                    articulo.Marca.idMarca = 5;
-                }
-                //articulo.Marca.marca = cboMarca.Text;
-
-
-                articulo.imagen = new Imagen();
-                
+                    articulo.Marca = new Marca();
+                    if (cboMarca.Text == "Samsung")
+                    {
+                        articulo.Marca.idMarca = 1;
+                    }
+                    if (cboMarca.Text == "Apple")
+                    {
+                        articulo.Marca.idMarca = 2;
+                    }
+                    if (cboMarca.Text == "Sony")
+                    {
+                        articulo.Marca.idMarca = 3;
+                    }
+                    if (cboMarca.Text == "Huawei")
+                    {
+                        articulo.Marca.idMarca = 4;
+                    }
+                    if (cboMarca.Text == "Motorola")
+                    {
+                        articulo.Marca.idMarca = 5;
+                    }
+                    //articulo.Marca.marca = cboMarca.Text;
 
 
-                articulo.imagen.idArticulo = negocio.TraerUltimoId();
-                articulo.imagen.url = tbURL.Text;
-                articulo.precio = decimal.Parse(nudPrecio.Text);
+                    articulo.imagen = new Imagen();
 
-                if (articulo.Id != 0)
-                {
-                    negocio.ModificarArticulo(articulo);
-                    MessageBox.Show("Modificado!");
+
+
+                    articulo.imagen.idArticulo = negocio.TraerUltimoId();
+                    articulo.imagen.url = tbURL.Text;
+                    articulo.precio = decimal.Parse(nudPrecio.Text);
+
+                    if (articulo.Id != 0)
+                    {
+                        negocio.ModificarArticulo(articulo);
+                        MessageBox.Show("Modificado!");
+                    }
+                    else
+                    {
+                        articulo.Id = negocio.TraerUltimoId();
+                        negocio.AgregarArticulo(articulo);
+                        MessageBox.Show("Agregado!");
+                    }
+
+                    Close();
                 }
                 else
                 {
-                    articulo.Id=negocio.TraerUltimoId();
-                    negocio.AgregarArticulo(articulo);
-                    MessageBox.Show("Agregado!");
+                    nudPrecio.BackColor = Color.Red;
+                    tbNombre.BackColor = Color.Red;
+                    tbCodigo.BackColor = Color.Red;
+                    MessageBox.Show("Por favor cargue Nombre, Codigo y Precio", "ATENCION ");
                 }
-
-                Close();
             }
             catch (Exception ex)
             {

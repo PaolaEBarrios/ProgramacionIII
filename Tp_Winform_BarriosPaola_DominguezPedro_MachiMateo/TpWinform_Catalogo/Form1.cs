@@ -102,6 +102,12 @@ namespace TpWinform_Catalogo
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
+            
+                btnAgregar.Visible = false;
+                btnEliminar.Visible = false;
+            
+
             List<Articulo> listaFiltrada;
 
             string filtro = txtFiltro.Text; 
@@ -115,18 +121,13 @@ namespace TpWinform_Catalogo
             {
                 listaFiltrada = listaArticulo;
 
-
             }
-
-
-
 
 
             dgvArticulo.DataSource = null; //limpia data
             dgvArticulo.DataSource = listaFiltrada;
 
-
-
+            ocultarColumnas();
 
         }
 
@@ -153,6 +154,11 @@ namespace TpWinform_Catalogo
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
