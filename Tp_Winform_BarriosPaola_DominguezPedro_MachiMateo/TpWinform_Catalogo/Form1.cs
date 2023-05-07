@@ -31,8 +31,16 @@ namespace TpWinform_Catalogo
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.imagen.url);
+
+            if (dgvArticulo.CurrentRow != null)
+            {
+
+                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.imagen.url);
+
+            }
+            
+            
         }
 
         private void cargar()
