@@ -189,9 +189,58 @@ namespace TpWinform_Catalogo
                 tbNombre.Text = articulo.nombre;
                 tbDescripcion.Text = articulo.descripcion;
                 articulo.Categoria = new Categoria();
-                cboCategoria.Text = articulo.Categoria.categoria;
+                //cboCategoria.Text = articulo.Categoria.categoria;
+                cboCategoria.SelectedIndex = articulo.Categoria.idCategoria;
                 articulo.Marca = new Marca();
-                cboMarca.Text = articulo.Marca.marca;
+                //cboMarca.Text = articulo.Marca.marca;
+                cboMarca.SelectedIndex = articulo.Marca.idMarca;
+
+                if (articulo.Categoria.idCategoria == 1)
+                {
+                    cboCategoria.Text = "Samsung";
+                    //cboCategoria.
+                }
+                if (articulo.Categoria.idCategoria == 2)
+                {
+
+                    cboCategoria.Text = "Televisores";
+                }
+                if (articulo.Categoria.idCategoria == 3)
+                {
+                    
+                    cboCategoria.Text = "Media";
+                }
+                if (articulo.Categoria.idCategoria == 4)
+                {
+                    
+                    cboCategoria.Text = "Audio";
+                }
+
+                if (articulo.Marca.idMarca == 1)
+                {
+                    
+                    cboMarca.Text = "Samsung";
+                }
+                if (articulo.Marca.idMarca == 2)
+                {
+                    
+                    cboMarca.Text = "Apple";
+                }
+                if (articulo.Marca.idMarca == 3)
+                {
+                    
+                    cboMarca.Text = "Sony";
+                }
+                if (articulo.Marca.idMarca == 4)
+                {
+                    
+                    cboMarca.Text = "Huawei";
+                }
+                if (articulo.Marca.idMarca == 5)
+                {
+
+                    cboMarca.Text = "Motorola";
+                }
 
                 articulo.imagen = new Imagen();
                 articulo.imagen.idArticulo = negocio.TraerUltimoId();
